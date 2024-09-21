@@ -21,7 +21,7 @@ body {
 }
 .btn-happy {
   position: absolute;
-  bottom: 0px;
+  bottom: -70px;
   text-decoration: none;
   width: 250px;
   text-align: center;
