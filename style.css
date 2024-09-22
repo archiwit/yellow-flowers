@@ -114,7 +114,7 @@ body {
   animation: dot- 4s ease-in-out infinite;
 }
 
-.flower{
+.flower {
   opacity: 1;
   -webkit-animation: blooming-flower 2s backwards;
   animation: blooming-flower 2s backwards;
@@ -428,7 +428,7 @@ body {
 }
 .flower__line {
   -webkit-animation: grow-flower-tree 4s backwards;
-    animation: grow-flower-tree 4s backwards;
+  animation: grow-flower-tree 4s backwards;
 }
 
 .flower__light {
@@ -487,18 +487,18 @@ body {
 }
 
 .nombrePer {
-  position: fixed;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   font-size: 10em;
   color: #fffef5;
   text-transform: uppercase;
   z-index: 1000;
   bottom: -10px;
-  text-shadow: 1.5px 1.5px 2px #c7b940,
-               -1.5px -1.5px 2px #7a5f14,
-               5px 5px 0px #2e2d2d,
-               7px 7px 0px #1f1c05,
-               10px 10px 0px #443913,
-               11.5px 11.5px 5px #5f5a49;
+  text-shadow: 1.5px 1.5px 2px #c7b940, -1.5px -1.5px 2px #7a5f14,
+    5px 5px 0px #2e2d2d, 7px 7px 0px #1f1c05, 10px 10px 0px #443913,
+    11.5px 11.5px 5px #5f5a49;
 }
 
 .bienvenida {
@@ -554,7 +554,6 @@ span {
   background: white;
   animation: animate 5s linear infinite;
 }
-
 
 @-webkit-keyframes moving-flower-1 {
   0%,
@@ -635,7 +634,8 @@ span {
 @keyframes blooming-flower {
   0% {
     opacity: 0;
-}  100% {
+  }
+  100% {
     opacity: 1;
   }
 }
@@ -712,5 +712,69 @@ span {
   0% {
     transform: scale(0);
     opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+  .nombrePer {
+    font-size: 5em;
+    top: 75%;
+    position: absolute;
+  }
+  .long-g {
+    position: absolute;
+    bottom: 12vmin;
+    left: 25vmin;
+    transform-origin: bottom left;
+    transform: rotate(-15deg);
+  }
+  .long-g--1 {
+    left: 87px;
+    bottom: -6vmin;
+    transform: scale(0.8) rotate(-5deg);
+  }
+  .long-g--2 {
+    left: 148px;
+    bottom: -3vmin;
+    transform-origin: center;
+    transform: scale(0.6) rotateX(60deg);
+  }
+  .long-g--3 {
+    left: 50vmin;
+    bottom: 5vmin;
+    z-index: -1;
+  }
+  .long-g--4 {
+    left: 58vmin;
+    bottom: -5vmin;
+    transform-origin: center;
+    transform: scale(0.6) rotateX(60deg);
+  }
+  .long-g--5 {
+    left: 83vmin;
+    bottom: 0vmin;
+    transform: scale(0.8) rotate(2deg);
+  }
+  .long-g--6 {
+    left: 69vmin;
+    bottom: -10vmin;
+    z-index: 100;
+    filter: blur(0.3vmin);
+    transform: scale(0.8) rotate(2deg);
+  }
+  .long-g--7 {
+    left: 30vmin;
+    bottom: 3vmin;
+    z-index: -1;
+    filter: blur(0.3vmin);
+    transform: scale(0.6) rotate(2deg);
+    opacity: 0.7;
+  }
+  .flower__line {
+    -webkit-animation: grow-flower-tree 4s backwards;
+    animation: grow-flower-tree 4s backwards;
   }
 }
